@@ -80,7 +80,9 @@ figure {
   position: fixed;
   overflow-y: scroll;
   z-index: 1001;
-  background: #000;
+  /* background: #000; */
+  
+  background-image: linear-gradient(to right, #d1cfcf, #000, #d1cfcf);
   color: #fff;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
@@ -252,6 +254,7 @@ figure {
         background-position: bottom center;
         min-height: 400px;
         position: relative; }
+
     #colorlib-hero .flexslider .flex-control-nav {
       bottom: 20px;
       z-index: 1000;
@@ -382,8 +385,8 @@ body.offcanvas {
 .colorlib-about,
 .colorlib-services,
 .colorlib-contact {
-  padding-top: 4em;
-  padding-bottom: 9em;
+  padding-top: 2em;
+  padding-bottom: 2em;
   clear: both;
   width: 100%;
   display: block; }
@@ -439,18 +442,37 @@ body.offcanvas {
   letter-spacing: 5px;
   font-weight: 500; }
 
+  @keyframes textEffect {
+    0% {
+      transform: scale(1);
+      color: #000;
+    }
+    100% {
+      transform: scale(1.2);
+      color: #fff;
+    }
+  }
+
 .hire {
-  padding: 1em;
-  background: #000;}
-  .hire h2 {
-    line-height: 1.5; }
+  padding: 0.5em;
+  background: #2c98f0;
+  text-align: center;}
+
+  .hire h5{
+  animation: textEffect 3s infinite;
+  }
+
   .hire .btn-hire {
-    color: #fff
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border-radius: 0.5rem;
-    border: 1px solid #fff;
-    padding: 0.5rem; }
+    color: #fff;
+    font-size: small;
+    letter-spacing: 1px;}
+
+    .hire a:hover{
+      text-decoration: underline !important; 
+      font-weight: 500;
+      color: black;
+      animation: textEffect 3s infinite;
+    }
 
 .fancy-collapse-panel .panel-default > .panel-heading {
   padding: 0; }
