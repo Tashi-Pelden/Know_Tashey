@@ -17,15 +17,14 @@ body {
   font-size: 15px;
   line-height: 1.8;
   color: rgba(0, 0, 0, 0.7); }
-  @media screen and (max-width: 992px) {
+  @media screen and (max-width: 768px) {
     body {
       font-size: 16px; } }
 
 a {
-  color: #2c98f0;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s; }
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s; }
   a:hover, a:active, a:focus {
     color: #2c98f0;
     outline: none;
@@ -77,25 +76,16 @@ figure {
   padding-bottom: 40px;
   float: left;
   width: 300px;
+  height: auto;
   position: fixed;
   overflow-y: scroll;
   z-index: 1001;
-  /* background: #000; */
-  
-  background-image: linear-gradient(to right, #d1cfcf, #000, #d1cfcf);
+  background-image: linear-gradient(to right, #000, #d1cfcf);
   color: #fff;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s; }
-  @media screen and (max-width: 768px) {
-    #colorlib-aside {
-      width: 300px;
-      -moz-transform: translateX(-300px);
-      -webkit-transform: translateX(-300px);
-      -ms-transform: translateX(-300px);
-      -o-transform: translateX(-300px);
-      transform: translateX(-300px);
-      padding-top: 4em; } }
+      
   #colorlib-aside .author-img {
     width: 20rem;
     height: 20rem;
@@ -132,9 +122,36 @@ figure {
       text-align: center;
       margin: 0;
       padding: 0; }
-      @media screen and (max-width: 768px) {
+      @media (max-width: 768px) {
         #colorlib-aside #colorlib-main-menu ul {
-          margin: 0 0 2em 0; } }
+          margin: 0 0 2em 0; } 
+          
+
+        #colorlib-aside #colorlib-logo a {
+            color: #000; }  
+            
+        
+            #colorlib-aside {
+              color: #000;
+              -moz-transform: translateX(-300px);
+              -webkit-transform: translateX(-300px);
+              -ms-transform: translateX(-300px);
+              -o-transform: translateX(-300px);
+              transform: translateX(-300px);
+              padding-top: 4em; } 
+        }
+
+        @media (max-width: 768px) {
+          #colorlib-hero .flexslider .slides li {
+              background-size: contain;
+          }
+
+          #colorlib-aside .colorlib-footer ul li a {
+            color: #000;
+          }
+      }
+
+
       #colorlib-aside #colorlib-main-menu ul li {
         margin: 0 0 10px 0;
         padding: 0;
@@ -143,6 +160,7 @@ figure {
         font-weight: 500;
         text-transform: uppercase;
         letter-spacing: 1px; }
+
         #colorlib-aside #colorlib-main-menu ul li a {
           color: #fff;
           text-decoration: none;
@@ -152,6 +170,13 @@ figure {
           -webkit-transition: 0.3s;
           -o-transition: 0.3s;
           transition: 0.3s; }
+
+          @media (max-width:768px) {
+            #colorlib-aside #colorlib-main-menu ul li a {
+              color: #000;
+            }
+          }
+
           #colorlib-aside #colorlib-main-menu ul li a:after {
             content: "";
             position: absolute;
@@ -171,6 +196,7 @@ figure {
             -ms-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             -o-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+         
           #colorlib-aside #colorlib-main-menu ul li a:hover {
             text-decoration: none;
             color: black; }
@@ -199,7 +225,8 @@ figure {
     width: 100%; }
     @media screen and (max-width: 768px) {
       #colorlib-aside .colorlib-footer {
-        position: relative;
+        position: fixed;
+        margin-bottom: 1rem;
         bottom: 0; } }
     #colorlib-aside .colorlib-footer span {
       display: block; }
@@ -214,6 +241,7 @@ figure {
         #colorlib-aside .colorlib-footer ul li a {
           color: rgba(255, 255, 255, 0.3);
           padding: 4px; }
+        
           #colorlib-aside .colorlib-footer ul li a:hover, #colorlib-aside .colorlib-footer ul li a:active, #colorlib-aside .colorlib-footer ul li a:focus {
             text-decoration: none;
             outline: none;
@@ -253,7 +281,21 @@ figure {
         background-size: cover;
         background-position: bottom center;
         min-height: 400px;
+        max-width: auto;
         position: relative; }
+
+        @media (max-width: 768px) {
+          #colorlib-hero .flexslider .slides li {
+              background-size: contain;
+          }
+
+          #colorlib-aside .colorlib-footer ul li a {
+            color: #000;
+          }
+
+
+      }
+
 
     #colorlib-hero .flexslider .flex-control-nav {
       bottom: 20px;
